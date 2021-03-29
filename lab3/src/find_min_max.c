@@ -8,5 +8,10 @@ struct MinMax GetMinMax(int *array, unsigned int begin, unsigned int end) {
   min_max.max = INT_MIN;
 
   // your code here
+  	for (unsigned int i = 0; i < end; i++)
+	{
+		if (array[i] < min_max.min) min_max.min = array[i];
+		if (array[i] > min_max.max) min_max.max = array[i];
+	}
   return min_max;
 }
